@@ -1,2 +1,2 @@
 # PKS4u
-A website offers USC students a platform to exchange surplus meal swipes. 
+Sample AWS implementation for direct C2C contact exchange

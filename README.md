@@ -1,2 +1,2 @@
-# pks_for_everyone
+# PKS4u
 A website offers USC students a platform to exchange surplus meal swipes. 

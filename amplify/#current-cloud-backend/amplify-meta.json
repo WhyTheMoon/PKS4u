@@ -1,0 +1,70 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-pks4u-dev-125619-authRole",
+      "UnauthRoleArn": "arn:aws:iam::507349883169:role/amplify-pks4u-dev-125619-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::507349883169:role/amplify-pks4u-dev-125619-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-pks4u-dev-125619-deployment",
+      "UnauthRoleName": "amplify-pks4u-dev-125619-unauthRole",
+      "StackName": "amplify-pks4u-dev-125619",
+      "StackId": "arn:aws:cloudformation:us-east-1:507349883169:stack/amplify-pks4u-dev-125619/f252c130-4a67-11ed-9e8a-0ad36f0e51dd",
+      "AmplifyAppId": "d1ebeov1qc1bnl"
+    }
+  },
+  "function": {
+    "pk4uFunc": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "dependsOn": [],
+      "lastBuildTimeStamp": "2022-10-12T20:02:10.369Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2022-10-12T20:02:13.926Z",
+      "distZipFilename": "pk4uFunc-6755546278527a386f64-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-pks4u-dev-125619-deployment",
+        "s3Key": "amplify-builds/pk4uFunc-6755546278527a386f64-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-pks4u-dev-125619-deployment/amplify-cfn-templates/function/pk4uFunc-cloudformation-template.json",
+        "logicalId": "functionpk4uFunc"
+      },
+      "lastPushTimeStamp": "2022-10-12T20:04:29.274Z",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:507349883169:function:pk4uFunc-dev",
+        "Name": "pk4uFunc-dev",
+        "LambdaExecutionRole": "pks4uLambdaRole5b1cf194-dev"
+      },
+      "lastPushDirHash": "BH5Snr3dEZtu16aGwph1DXU/5zI="
+    }
+  },
+  "api": {
+    "pks4u": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "pk4uFunc",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-pks4u-dev-125619-deployment/amplify-cfn-templates/api/pks4u-cloudformation-template.json",
+        "logicalId": "apipks4u"
+      },
+      "lastPushTimeStamp": "2022-10-12T20:04:29.274Z",
+      "output": {
+        "ApiName": "pks4u",
+        "RootUrl": "https://qerdcb1tlj.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "qerdcb1tlj"
+      },
+      "lastPushDirHash": "/yuph3imdQDs70BSA0fYLcqEMnE="
+    }
+  }
+}
